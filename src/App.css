@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  height: 100%;
+  min-height: 100vh;
+  color: white;
 }
 
 .App-logo {
@@ -35,4 +39,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.terminal {
+  border: 1px solid silver;
+  width: 400px;
+  font-size: 16px;
+  float: left;
+  background-color: #282c34;
+  color: white;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
