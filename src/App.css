@@ -57,3 +57,18 @@ pre {
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
+
+.controls {
+}
+
+.controls button {
+  background: hotpink;
+  color: white;
+  cursor: pointer;
+  margin: 5px 15px;
+}
+
+.controls button:disabled {
+  background: gray;
+  cursor: auto;
+}
