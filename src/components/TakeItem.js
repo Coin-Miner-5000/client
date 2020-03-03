@@ -14,8 +14,8 @@ function TakeItem({ take, items }) {
       {items.length <= 0 ? (
         <p>No items in this rooms</p>
       ) : (
-        items.map(item => {
-          return <p>{item}</p>;
+        items.map((item, index) => {
+          return <p key={index}>{item}</p>;
         })
       )}
       <form>
