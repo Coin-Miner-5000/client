@@ -112,6 +112,7 @@ function App() {
       })
       .then(res => {
         console.log(res);
+        setCooldown(Math.ceil(res.data.cooldown));
       })
       .catch(err => {
         console.log(err.response);

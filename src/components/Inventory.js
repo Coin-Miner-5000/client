@@ -33,8 +33,8 @@ function Inventory({ setCooldown }) {
       </button>
       <div>
         <p>{user.name}</p>
-        {inventory.map(item => {
-          return <p key={item}>{item}</p>;
+        {inventory.map((item, index) => {
+          return <p key={index}>{item}</p>;
         })}
       </div>
     </div>
