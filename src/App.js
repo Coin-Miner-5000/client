@@ -36,6 +36,18 @@ function App() {
         if (res.data.exits.includes("w")) {
           setCanMoveW(true);
         }
+        if (!res.data.exits.includes("n")) {
+          setCanMoveN(false);
+        }
+        if (!res.data.exits.includes("s")) {
+          setCanMoveS(false);
+        }
+        if (!res.data.exits.includes("e")) {
+          setCanMoveE(false);
+        }
+        if (!res.data.exits.includes("w")) {
+          setCanMoveW(false);
+        }
       })
       .catch(err => {
         console.log(err.response);
@@ -60,6 +72,30 @@ function App() {
         setData(res.data);
         setCooldown(res.data.cooldown);
         setItems(res.data.items);
+        if (res.data.exits.includes("n")) {
+          setCanMoveN(true);
+        }
+        if (res.data.exits.includes("s")) {
+          setCanMoveS(true);
+        }
+        if (res.data.exits.includes("e")) {
+          setCanMoveE(true);
+        }
+        if (res.data.exits.includes("w")) {
+          setCanMoveW(true);
+        }
+        if (!res.data.exits.includes("n")) {
+          setCanMoveN(false);
+        }
+        if (!res.data.exits.includes("s")) {
+          setCanMoveS(false);
+        }
+        if (!res.data.exits.includes("e")) {
+          setCanMoveE(false);
+        }
+        if (!res.data.exits.includes("w")) {
+          setCanMoveW(false);
+        }
       })
       .catch(err => {
         console.log(err.response);
