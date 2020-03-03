@@ -21,14 +21,22 @@ function Inventory({ setCooldown }) {
   };
 
   return (
-    <div>
-      <button onClick={e => getInventory(e)} style={{ marginTop: "30px" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      <button onClick={e => getInventory(e)} style={{ margin: "30px" }}>
         View Inventory
       </button>
-      <p>{user.name}</p>
-      {inventory.map(item => {
-        return <p key={item}>{item}</p>;
-      })}
+      <div>
+        <p>{user.name}</p>
+        {inventory.map(item => {
+          return <p key={item}>{item}</p>;
+        })}
+      </div>
     </div>
   );
 }

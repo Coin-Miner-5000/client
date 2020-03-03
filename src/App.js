@@ -120,38 +120,54 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>Cooldown</p>
-        <p>{cooldown}</p>
-      </div>
+      <Inventory setCooldown={setCooldown} />
       <div className="terminal">
         <pre>{jsonCode}</pre>
       </div>
-      <div className="controls">
-        <p>Controls</p>
-        <button onClick={() => move("n")} disabled={cooldown > 0 || !canMoveN}>
-          N
-        </button>
+      <div
+        style={{
+          display: "flex",
+          border: "1px solid silver",
+          justifyContent: "space-between",
+          padding: "20px 80px",
+          margin: "40px 20px"
+        }}
+      >
         <div>
+          <p>Cooldown</p>
+          <p>{cooldown}</p>
+        </div>
+        <div className="controls">
+          <p>Controls</p>
           <button
-            onClick={() => move("w")}
-            disabled={cooldown > 0 || !canMoveW}
+            onClick={() => move("n")}
+            disabled={cooldown > 0 || !canMoveN}
           >
-            W
+            N
           </button>
+          <div>
+            <button
+              onClick={() => move("w")}
+              disabled={cooldown > 0 || !canMoveW}
+            >
+              W
+            </button>
+            <button
+              onClick={() => move("e")}
+              disabled={cooldown > 0 || !canMoveE}
+            >
+              E
+            </button>
+          </div>
           <button
-            onClick={() => move("e")}
-            disabled={cooldown > 0 || !canMoveE}
+            onClick={() => move("s")}
+            disabled={cooldown > 0 || !canMoveS}
           >
-            E
+            S
           </button>
         </div>
-        <button onClick={() => move("s")} disabled={cooldown > 0 || !canMoveS}>
-          S
-        </button>
       </div>
       <TakeItem take={take} items={items} />
-      <Inventory setCooldown={setCooldown} />
     </div>
   );
 }
